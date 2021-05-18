@@ -82,6 +82,15 @@
         <artifactId>okhttp</artifactId>
         <version>4.2.2</version>
     </dependency>
+		<!-- postgres sql for heroku -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core -->
 		<!-- <dependency>
 			<groupId>org.hibernate.orm</groupId>

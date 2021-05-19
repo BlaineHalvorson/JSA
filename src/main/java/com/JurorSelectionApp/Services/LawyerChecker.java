@@ -50,7 +50,7 @@ public class LawyerChecker {
 
 		try (Response response = httpClient.newCall(request).execute()) {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/jurorselectionapplication", "root", "");
+            Connection cn = DriverManager.getConnection("jdbc:mysql:us-cdbr-east-03.cleardb.com/heroku_08425c492f42421?reconnect=true", "bd7e3051eefc04", "4df9e068");
             Statement s = cn.createStatement();
 			String checkUser = "select * from user_info where ";
 			checkUser += "uName like '%" + uName + "%';";

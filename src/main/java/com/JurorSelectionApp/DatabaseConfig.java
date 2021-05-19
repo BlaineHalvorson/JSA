@@ -30,11 +30,10 @@ public class DatabaseConfig {
   public DataSource dataSource() {
     DriverManagerDataSource dataSource = new DriverManagerDataSource();
     dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-    dataSource.setUrl("jdbc:mysql:frwahxxknm9kwy6c.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/gjsg7sadgfr9w1tl");
-    dataSource.setUsername("n6udqa17y74tqa1s");
-    dataSource.setPassword("yyxibnvrwc1km0ir");
+    dataSource.setUrl("jdbc:mysql:us-cdbr-east-03.cleardb.com/heroku_08425c492f42421?reconnect=true");
+    dataSource.setUsername("bd7e3051eefc04");
+    dataSource.setPassword("4df9e068");
     return dataSource;
     // mysql://bd7e3051eefc04:4df9e068@us-cdbr-east-03.cleardb.com/heroku_08425c492f42421?reconnect=true
-    // mysql://n6udqa17y74tqa1s:yyxibnvrwc1km0ir@frwahxxknm9kwy6c.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/gjsg7sadgfr9w1tl
   }
 }

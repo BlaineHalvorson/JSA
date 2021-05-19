@@ -13,7 +13,6 @@ public class DatabaseConfig {
   public NamedParameterJdbcTemplate namedParameterJdbcTemplate(DataSource dataSource) {
       return new NamedParameterJdbcTemplate(dataSource);
   }
-  
   //use for local testing
   // @Bean
   // public DataSource dataSource() {

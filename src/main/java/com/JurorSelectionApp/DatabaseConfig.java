@@ -1,7 +1,5 @@
 package com.JurorSelectionApp;
 
-import com.zaxxer.hikari.*;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.*;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
@@ -32,7 +30,7 @@ public class DatabaseConfig {
   public DataSource dataSource() {
     DriverManagerDataSource dataSource = new DriverManagerDataSource();
     dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-    dataSource.setUrl("frwahxxknm9kwy6c.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/gjsg7sadgfr9w1tl");
+    dataSource.setUrl("jdbc:mysql:frwahxxknm9kwy6c.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/gjsg7sadgfr9w1tl");
     dataSource.setUsername("n6udqa17y74tqa1s");
     dataSource.setPassword("yyxibnvrwc1km0ir");
     return dataSource;

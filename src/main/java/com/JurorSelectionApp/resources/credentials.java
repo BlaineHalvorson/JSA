@@ -2,7 +2,7 @@ package com.JurorSelectionApp.resources;
 
 public class credentials {
   //public static String DatabaseURL = "jdbc:mysql://localhost:3306/jurorselectionapplication?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
-  public static String DatabaseURL = "jdbc:mysql://bd7e3051eefc04:4df9e068@us-cdbr-east-03.cleardb.com/heroku_08425c492f42421?reconnect=true";
+  public static String DatabaseURL = "jdbc:mysql://us-cdbr-east-03.cleardb.com/heroku_08425c492f42421?reconnect=true";
   //public static String DatabasePassword = "";
   public static String DatabasePassword = "4df9e068";
   //public static String DatabaseUsername = "root";

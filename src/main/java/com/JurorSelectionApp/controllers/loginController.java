@@ -11,6 +11,7 @@ import org.springframework.ui.Model;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
+import com.JurorSelectionApp.resources.credentials;
 
 @Controller
 public class loginController {
@@ -21,7 +22,7 @@ public class loginController {
     public String login(Model model, @RequestParam(value="username", required = true) String uname, @RequestParam(value="password", required = true) String pword) throws Exception{
         
         Class.forName("com.mysql.cj.jdbc.Driver");
-        Connection cn = DriverManager.getConnection("jdbc:mysql://us-cdbr-east-03.cleardb.com/heroku_08425c492f42421?reconnect=true", "bd7e3051eefc04", "4df9e068");
+        Connection cn = DriverManager.getConnection(credentials.getDatabaseURL(), credentials.getDatabaseUsername(), credentials.getDatabasePassword());
         Statement s = cn.createStatement();
         String checkUser = "select * from user_info where ";
         checkUser += "uName like '%" + uname + "%';";

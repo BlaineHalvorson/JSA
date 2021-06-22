@@ -15,7 +15,7 @@ import twitter4j.TwitterException;
 import twitter4j.TwitterFactory;
 import twitter4j.auth.AccessToken;
 
-
+import com.JurorSelectionApp.resources.credentials;
 
 @Controller
 public class TwitterController {
@@ -59,14 +59,6 @@ public class TwitterController {
       return resultURL;
     }
   }
-  
-  //Consumer Keys
-  public static String APIKey = "jf17zQrbUvhFZBR4lNLWagB2n";
-  public static String APIKeySecret = "e6UctqDOsbuwv19FqUbNeCvIOWRqz97oOQGBKjUb6yuWhpL3Es";
-  
-  //Access tokens
-  public static String AccessToken = "1239719404088299525-jiEv8stzv85qToF6FYKJtbwZIAl0gJ";
-  public static String AccessTokenSecret = "r5tzVEfewhx4Ed0ZXa1LyArMF8WqSusf66Zewi8nde6Gd";
   
   @RequestMapping(value = "/twitterSearchAPI")
   public static String getTwitterStatus(Model model, @RequestParam(required = true) String Username, @RequestParam(required = true) String Query){
@@ -134,8 +126,8 @@ public class TwitterController {
     final long startTime = System.nanoTime();
     Twitter twitter = new TwitterFactory().getInstance();
   
-    twitter.setOAuthConsumer(APIKey, APIKeySecret);
-    twitter.setOAuthAccessToken(new AccessToken(AccessToken, AccessTokenSecret));
+    twitter.setOAuthConsumer(credentials.getTwitterAPIKey(), credentials.getTwitterAPIKeySecret());
+    twitter.setOAuthAccessToken(new AccessToken(credentials.getTwitterAccessToken(), credentials.getTwitterAccessTokenSecret()));
     
     //Used for getting every post on a users page
     int pagenum = 1;

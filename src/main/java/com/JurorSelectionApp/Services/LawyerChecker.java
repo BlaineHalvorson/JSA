@@ -19,8 +19,6 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
-import com.JurorSelectionApp.resources.credentials;
-
 @Controller
 public class LawyerChecker {
 
@@ -52,7 +50,7 @@ public class LawyerChecker {
 
 		try (Response response = httpClient.newCall(request).execute()) {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection cn = DriverManager.getConnection(credentials.getDatabaseURL(), credentials.getDatabaseUsername(), credentials.getDatabasePassword());
+            Connection cn = DriverManager.getConnection("jdbc:mysql://us-cdbr-east-03.cleardb.com/heroku_08425c492f42421?reconnect=true", "bd7e3051eefc04", "4df9e068");
             Statement s = cn.createStatement();
 			String checkUser = "select * from user_info where ";
 			checkUser += "uName like '%" + uName + "%';";

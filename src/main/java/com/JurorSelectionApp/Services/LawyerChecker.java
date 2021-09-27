@@ -1,4 +1,4 @@
-package com.JurorSelectionApp.services;
+package com.JurorSelectionApp.Services;
 
 import java.io.IOException;
 
